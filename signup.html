@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Sign Up</title>
+  </head>
+
+  <body>
+    <div class="container-box">
+      <h1>Sign Up</h1>
+      <form action="register-user.php" method="post" autocomplete="off">
+        <p id="required-label"><span>* </span>Required</p>
+
+        <p id="unameEmail">(Your email will also be your username)</p>
+        <div class="form-group">
+          <label for="username"><span>* </span>Email:</label>
+          <input
+            type="email"
+            name="username"
+            id="username"
+            placeholder="e.g. juansoto@gmail.com"
+            pattern=".+@[a-zA-Z]+\.(com|edu)"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="first-name"><span>* </span>First name:</label>
+          <input type="text" name="first-name" id="first-name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="last-name"><span>* </span>Last name:</label>
+          <input type="text" name="last-name" id="last-name" required />
+        </div>
+
+        <div class="form-group">
+          <label>Sex:</label>
+          <div>
+            <input type="radio" name="GR" id="M" value="M" required />
+            <label for="M">Male</label>
+            <input type="radio" name="GR" id="F" value="F" required />
+            <label for="F">Female</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="password"><span>* </span>Password:</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            minlength="8"
+            placeholder="Example: Password123"
+            pattern="(?=.*\d)(?=.*[a-zA-Z]).{8,}"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="confirm-pass"><span>* </span>Confirm password:</label>
+          <input
+            type="password"
+            name="confirm-pass"
+            id="confirm-pass"
+            minlength="8"
+            required
+          />
+        </div>
+
+        <p id="validator"></p>
+        <button type="submit" id="signup">Sign Up</button>
+        <br /><br />
+        <a href="index.html">Back to login page</a>
+      </form>
+    </div>
+
+    <script src="signup.js"></script>
+  </body>
+</html>
